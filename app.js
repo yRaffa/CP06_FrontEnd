@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(books => {
         books.forEach(book => {
           const bookElement = document.createElement('div');
-          bookElement.classList.add('book', `book-${book.id}`);
+          bookElement.classList.add('book', `book-${book.id}`, 'card');
           bookElement.innerHTML = `
             <h3>${book.titulo}</h3>
             <img src="${book.imagem}" alt="${book.titulo}" width="250px">

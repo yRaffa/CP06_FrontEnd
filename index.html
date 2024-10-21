@@ -1,41 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+    defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
   <title>Front-end Books</title>
 </head>
+
 <body>
-  <header class="books__header">
-    <h1>Top Front-end Books</h1>
-    <nav class="menu">
-      <a href="#about">About</a>
-      <a href="#books">Books</a>
-      <a href="#contact">Contact</a>
+  <header class="books-header">
+    <nav class="menu-books menu navbar navbar-expand-lg navbar-dark bg-dark py-4 fixed-top">
+      <a href="index.html" class="navbar-brand d-flex justify-content-between align-items-center order-lg-0">
+        <h1 class="text-uppercase fw-lighter ms-2 fw-bold"><i class="fa fa-book"></i> Top Front-end Books</h1>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+        <ul class="navbar-nav mx-auto text-center">
+          <li class="nav-item px-2 py-2"><a href="#about" class="nav-link text-uppercase text-white">About</a></li>
+          <li class="nav-item px-2 py-2"><a href="#books" class="nav-link text-uppercase text-white">Books</a></li>
+          <li class="nav-item px-2 py-2"><a href="#contact" class="nav-link text-uppercase text-white">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <section id="about" class="about">
-    <h2>About This Collection</h2>
-    <p>Here are some of the best books to learn front-end development, covering HTML, CSS, JavaScript, and more.</p>
-    <img src="https://via.placeholder.com/100" alt="Bookshelf image">
+    <div class="container">
+      <div class="title text-center">
+        <h2 class="position-relative">About This Collection</h2>
+        <p class="position-relative">Here are some of the best books to learn front-end development, covering HTML, CSS,
+          JavaScript, and more.</p>
+        <img class="img-books" src="frontendbooks.png" alt="Bookshelf image">
+      </div>
+    </div>
   </section>
 
   <section id="books" class="books">
-    <h2>Featured Books</h2>
+    <div class="title text-center">
+      <h2 class="position-relative">Featured Books</h2>
+    </div>
     <div id="book-list" class="book-list"></div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>For suggestions or book recommendations, reach out at <a href="mailto:frontbooks@example.com">frontbooks@example.com</a>.</p>
-  </section>
-
+  <footer id="contact" class="bg-dark py-5 contact">
+    <div class="container">
+      <div class="row text-white g-5">
+        <div class="col-md-6 col-lg-3">
+          <a href="index.html" class="text-white text-uppercase text-decoration-none brand">&copyTOP FrontEnd Books</a>
+          <p class="text-footer mt-3">For any suggestions or book recommendations, contact us in: </p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5 class="text-white fw-light mb-3">Contact</h5>
+          <div class="d-flex justify-content-start align-items-start my-2 text-footer">
+            <span class="me-3"><i class="fas fa-map-marked-alt"></i></span>
+            <span class="fw-light">Rua, São Paulo, 123, Brasil</span>
+          </div>
+          <div class="d-flex justify-content-start align-items-start my-2 text-footer">
+            <span class="me-3"><i class="fas fa-envelope"></i></span>
+            <span class="fw-light"><a class="text-decoration-none"
+                href="mailto:frontbooks@example.com">frontbooks@example.com</a></span>
+          </div>
+          <div class="d-flex justify-content-start align-items-start my-2 text-footer">
+            <span class="me-3"><i class="fas fa-phone-alt"></i></span>
+            <span class="fw-light">+55 11 98765-4321</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5 class="text-white fw-light mb-3">Social</h5>
+          <div>
+            <ul class="d-flex list-unstyled">
+              <li>
+                <a href="#" class="text-footer text-decoration-none fs-4 me-4 text-white"><i
+                    class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#" class="text-footer text-decoration-none fs-4 me-4 text-white"><i
+                    class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" class="text-footer text-decoration-none fs-4 me-4 text-white"><i
+                    class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#" class="text-footer text-decoration-none fs-4 me-4 text-white"><i
+                    class="fab fa-tiktok"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5 class="text-white fw-light mb-3 d-flex">Links</h5>
+          <ul class="list-unstyled text-footer text-white">
+            <li class="my-3">
+              <a href="#" class="text-decoration-none"><i class="fas fa-chevron-right me-1"></i>HOME</a>
+            </li>
+            <li class="my-3">
+              <a href="#about" class="text-decoration-none"><i class="fas fa-chevron-right me-1"></i>ABOUT</a>
+            </li>
+            <li class="my-3">
+              <a href="#books" class="text-decoration-none"><i class="fas fa-chevron-right me-1"></i>BOOKS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
